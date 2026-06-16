@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — Chaga</title>
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root { --bg: #0A120A; --accent: #C4763A; --text: #F0EBE0; --text2: #A8A090; --border: #1E2E1E; }
+    body { font-family: -apple-system, 'SF Pro Display', 'Helvetica Neue', sans-serif; background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
+    a { color: var(--accent); text-decoration: none; }
+    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; background: rgba(10,18,10,0.92); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); }
+    .nav-inner { max-width: 1080px; margin: 0 auto; padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; }
+    .logo { font-size: 22px; font-weight: 800; color: var(--text); }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 28px; align-items: center; }
+    .nav-links a { color: var(--text2); font-size: 14px; font-weight: 500; }
+    .legal { max-width: 680px; margin: 0 auto; padding: 120px 24px 80px; }
+    .legal h1 { font-size: 32px; font-weight: 800; margin-bottom: 8px; }
+    .legal .updated { font-size: 13px; color: var(--text2); margin-bottom: 40px; }
+    .legal h2 { font-size: 20px; font-weight: 700; margin: 36px 0 12px; color: var(--accent); }
+    .legal p { font-size: 15px; color: var(--text2); margin-bottom: 16px; }
+    .legal ul { margin: 12px 0 20px 20px; }
+    .legal li { font-size: 14px; color: var(--text2); margin-bottom: 6px; }
+    footer { border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; }
+    .footer-links { display: flex; gap: 24px; justify-content: center; margin-bottom: 16px; flex-wrap: wrap; }
+    .footer-links a { color: var(--text2); font-size: 13px; }
+    .footer-copy { font-size: 12px; color: #555; }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">chaga<span>.</span></a>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="why.html">Why Chaga</a>
+    </div>
+  </div>
+</nav>
+
+<div class="legal">
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: June 16, 2026</p>
+
+  <p>Chaga ("we," "us," or "our") operates the Chaga mobile application. This Privacy Policy explains what information we collect, how we use it, and your rights regarding your data.</p>
+
+  <h2>What We Collect</h2>
+  <ul>
+    <li><strong>Barcode scans</strong> — Product barcodes you scan are sent to our servers to retrieve product data. Scan history is stored locally on your device.</li>
+    <li><strong>Usage analytics</strong> — We use PostHog to collect anonymized usage events (screens viewed, features used, scan counts). No personally identifiable information is included in analytics events.</li>
+    <li><strong>Subscription data</strong> — Subscription status is managed by RevenueCat and Apple. We receive subscription status (active/expired) but never see your payment details.</li>
+    <li><strong>Preferences</strong> — Allergen selections, pet profiles, and dietary preferences are stored locally on your device using AsyncStorage. They are sent as parameters with scan requests to personalize results but are not stored on our servers.</li>
+    <li><strong>Device identifier</strong> — A randomly generated anonymous device ID is stored locally for community image attribution. It is not linked to your identity.</li>
+  </ul>
+
+  <h2>What We Do Not Collect</h2>
+  <ul>
+    <li><strong>Photos</strong> — Product photos taken for community upload are sent directly to our storage service. We do not access your photo library or camera roll beyond the specific image you select.</li>
+    <li><strong>Location</strong> — Chaga does not request or collect location data.</li>
+    <li><strong>Contacts</strong> — Chaga does not access your contacts, address book, or social accounts.</li>
+    <li><strong>Names or email addresses</strong> — Account creation uses Supabase Auth. We store a user ID and email for authentication only.</li>
+  </ul>
+
+  <h2>Third-Party Services</h2>
+  <p>Chaga uses the following third-party services to operate:</p>
+  <ul>
+    <li><strong>Open Food Facts</strong> — Open-source product database. Barcode lookups are made to their public API.</li>
+    <li><strong>Supabase</strong> — Database and authentication hosting.</li>
+    <li><strong>RevenueCat</strong> — Subscription management. Processes subscription events between Apple and our database.</li>
+    <li><strong>PostHog</strong> — Privacy-focused analytics. Hosted in the US. No PII collected.</li>
+    <li><strong>Railway</strong> — API proxy hosting. Processes barcode lookups and ingredient cross-referencing.</li>
+    <li><strong>Spoonacular</strong> — Secondary product image source when Open Food Facts lacks images.</li>
+    <li><strong>FDA Open Data</strong> — Public API for recall alerts. No user data is sent to the FDA.</li>
+  </ul>
+
+  <h2>Data Storage</h2>
+  <p>Scan history, allergen preferences, pet profiles, and app settings are stored locally on your device using AsyncStorage. This data does not leave your device unless you explicitly choose to create an account, in which case authentication tokens are stored securely.</p>
+  <p>Product data is cached on our servers (Supabase) to improve response times. This cache contains product information only — never user information.</p>
+
+  <h2>Data Retention</h2>
+  <p>Analytics data is retained for 12 months, then automatically deleted. Product cache data is refreshed every 30 days. You can delete your local scan history at any time from the app's Settings screen.</p>
+
+  <h2>Your Rights</h2>
+  <p>You may request deletion of any data associated with your account by contacting us at <a href="mailto:privacy@chaga.app">privacy@chaga.app</a>. You may also delete all local data by uninstalling the app or clearing scan history in Settings.</p>
+
+  <h2>Children's Privacy</h2>
+  <p>Chaga is not directed at children under 13. We do not knowingly collect personal information from children.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated revision date.</p>
+
+  <h2>Contact</h2>
+  <p>For questions about this Privacy Policy, contact us at <a href="mailto:privacy@chaga.app">privacy@chaga.app</a>.</p>
+
+  <h2>Governing Law</h2>
+  <p>This Privacy Policy is governed by the laws of the State of Texas, United States.</p>
+</div>
+
+<footer>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="why.html">Why Chaga</a>
+    <a href="terms.html">Terms of Service</a>
+    <a href="mailto:privacy@chaga.app">Contact</a>
+  </div>
+  <p class="footer-copy">&copy; 2026 Chaga.</p>
+</footer>
+
+</body>
+</html>
